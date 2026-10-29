@@ -1,0 +1,29 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# YOLOv5 outputs and downloaded weights
+yolov5/runs/
+*.pt
+!yolov5/best.pt
+*.onnx
+*.engine
+
+# Datasets (download from Roboflow instead of committing)
+datasets/
+train/
+valid/
+test/
+
+# Secrets
+.env
+*credentials*.json
+firebase_config.json

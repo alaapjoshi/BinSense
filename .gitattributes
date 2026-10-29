@@ -1,0 +1,3 @@
+# Mark the vendored Ultralytics code so GitHub's language bar reflects BinSense's own code
+yolov5/** linguist-vendored
+yolov5/binsense.py -linguist-vendored
