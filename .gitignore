@@ -10,10 +10,10 @@ __pycache__/
 venv/
 *.egg-info/
 
-# YOLOv5 outputs and downloaded weights
-yolov5/runs/
+# YOLOv5 run outputs and downloaded weights
+vision/runs/
 *.pt
-!yolov5/best.pt
+!vision/best.pt
 *.onnx
 *.engine
 

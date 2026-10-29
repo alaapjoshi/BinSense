@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --bg: #0F172A;
+  --card: #1E293B;
+  --text: #F8FAFC;
+  --muted: #94A3B8;
+  --accent: #38BDF8;
+  --line: #334155;
+  --recycle: #4ADE80;
+  --trash: #F87171;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: var(--w);
+  height: var(--h);
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+.chip {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.muted { color: var(--muted); }
+
+/* Gallery layout: short title on top, one visual below */
+.gallery {
+  --w: 1600px;
+  --h: 1000px;
+  padding: 72px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.gallery .eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.gallery h1 { font-size: 52px; font-weight: 800; letter-spacing: -0.02em; margin-top: 10px; }
+.gallery .lede { font-size: 24px; color: var(--muted); margin-top: 12px; }
+.gallery .stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; gap: 48px; }
+
+/* Window frame around a real screenshot */
+.window { overflow: hidden; display: flex; flex-direction: column; }
+.window .bar {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  background: #273449;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+.window .dot { width: 12px; height: 12px; border-radius: 50%; background: #475569; }
+.window .bar .name { margin-left: 12px; }
+.window img { display: block; width: 100%; }
+
+.photo { overflow: hidden; }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.byline { position: absolute; font-size: 16px; color: var(--muted); font-weight: 500; }

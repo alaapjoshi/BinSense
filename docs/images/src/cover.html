@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+  body { --w: 1280px; --h: 640px; position: relative; display: flex; align-items: center; padding: 64px; gap: 56px; }
+  .text { flex: 0 0 520px; }
+  h1 { font-size: 72px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+  .pitch { font-size: 28px; line-height: 1.35; margin-top: 24px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+  .award { margin-top: 28px; font-size: 18px; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .award::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+  .window { flex: 1; }
+  .byline { left: 64px; bottom: 36px; }
+</style>
+</head>
+<body>
+  <div class="text">
+    <h1>BinSense</h1>
+    <p class="pitch muted">A smart trash can that uses computer vision to sort recycling from trash.</p>
+    <div class="chips">
+      <span class="chip">Python</span><span class="chip">YOLOv5</span><span class="chip">OpenCV</span><span class="chip">Arduino</span>
+    </div>
+    <p class="award">1st place, Sustainability prize</p>
+  </div>
+  <div class="window card">
+    <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="name">BinSense</span></div>
+    <img src="hud-capture.png" alt="">
+  </div>
+  <span class="byline">Alaap Joshi</span>
+</body>
+</html>

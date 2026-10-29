@@ -35,7 +35,6 @@ void loop() {
   // 2. Cooldown passed
   if (Serial.available() > 0 && millis() - lastActionTime > cooldown) {
     char incomingByte = Serial.read();
-    Serial.println(incomingByte); // DEBUG
 
     // =========================
     // TRASH

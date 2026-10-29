@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .window { width: 1040px; flex: none; }
+  .notes { flex: 1; display: flex; flex-direction: column; gap: 22px; }
+  .note { padding: 24px 28px; }
+  .note .t { font-size: 23px; font-weight: 700; }
+  .note .d { font-size: 19px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+</style>
+</head>
+<body class="gallery">
+  <header>
+    <div class="eyebrow">Live HUD</div>
+    <h1>Detect, decide, and sort in real time</h1>
+  </header>
+  <div class="stage">
+    <div class="window card">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="name">BinSense</span></div>
+      <img src="hud-capture.png" alt="">
+    </div>
+    <div class="notes">
+      <div class="note card"><div class="t">Recycled and trash counts</div><div class="d">Running totals, plus the recycling rate</div></div>
+      <div class="note card"><div class="t">Current detection</div><div class="d">Class name and model confidence</div></div>
+      <div class="note card"><div class="t">Sort confirmation</div><div class="d">A green or red flash and a banner each time a lid opens</div></div>
+    </div>
+  </div>
+</body>
+</html>

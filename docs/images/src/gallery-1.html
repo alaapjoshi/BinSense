@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .photo { width: 860px; height: 645px; flex: none; }
+  .specs { flex: 1; padding: 44px; height: 645px; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
+  .spec .k { font-size: 18px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; }
+  .spec .v { font-size: 26px; font-weight: 600; margin-top: 6px; }
+  .spec .d { font-size: 19px; color: var(--muted); margin-top: 4px; }
+</style>
+</head>
+<body class="gallery">
+  <header>
+    <div class="eyebrow">Hardware</div>
+    <h1>A two-lid bin driven by an Arduino</h1>
+  </header>
+  <div class="stage">
+    <div class="photo card"><img src="../photo-bin.jpg" alt=""></div>
+    <div class="specs card">
+      <div class="spec"><div class="k">Controller</div><div class="v">Arduino Uno</div><div class="d">Listens on USB serial at 9600 baud</div></div>
+      <div class="spec"><div class="k">Actuators</div><div class="v">2 micro servos</div><div class="d">One lid each for recycling and trash</div></div>
+      <div class="spec"><div class="k">Feedback</div><div class="v">Green and red LEDs</div><div class="d">Light up with the lid that opens</div></div>
+      <div class="spec"><div class="k">Timing</div><div class="v">Lid open 3 s</div><div class="d">Then a 5 s lockout against double sorts</div></div>
+    </div>
+  </div>
+</body>
+</html>

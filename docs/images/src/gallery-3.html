@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .flow { display: grid; grid-template-columns: 1fr 64px 1fr 64px 1fr 64px 1fr; align-items: center; width: 100%; }
+  .node { padding: 36px 28px; height: 400px; display: flex; flex-direction: column; }
+  .node .n { flex: none; width: 44px; height: 40px; border-radius: 50%; background: var(--accent); color: var(--bg); font-weight: 800; font-size: 20px; display: flex; align-items: center; justify-content: center; }
+  .node .t { font-size: 30px; font-weight: 700; margin-top: 26px; }
+  .node .f { font-size: 18px; color: var(--accent); font-weight: 500; margin-top: 8px; font-family: ui-monospace, Menlo, monospace; }
+  .node .d { font-size: 21px; color: var(--muted); margin-top: 18px; line-height: 1.45; }
+  .arrow { height: 3px; background: var(--line); position: relative; margin: 0 12px; }
+  .arrow::after { content: ""; position: absolute; right: -2px; top: -7px; border: 8.5px solid transparent; border-left: 12px solid var(--line); border-right: 0; }
+  .outs { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+  .out { display: flex; align-items: center; gap: 12px; font-size: 21px; line-height: 1.35; }
+  .out i { width: 14px; height: 14px; border-radius: 50%; flex: none; }
+  .serial { display: flex; gap: 10px; margin-top: 16px; }
+  .serial span { font-family: ui-monospace, Menlo, monospace; font-size: 18px; padding: 6px 12px; border-radius: 8px; background: var(--bg); }
+</style>
+</head>
+<body class="gallery">
+  <header>
+    <div class="eyebrow">How it works</div>
+    <h1>From camera frame to open lid</h1>
+  </header>
+  <div class="stage">
+    <div class="flow">
+      <div class="node card"><div class="n">1</div><div class="t">Webcam</div><div class="f">LoadStreams</div><div class="d">Frames are read from the camera and resized to 640 × 640</div></div>
+      <div class="arrow"></div>
+      <div class="node card"><div class="n">2</div><div class="t">YOLOv5</div><div class="f">best.pt · 19 classes</div><div class="d">The custom model returns boxes; the top-confidence one is kept</div></div>
+      <div class="arrow"></div>
+      <div class="node card"><div class="n">3</div><div class="t">Decide</div><div class="f">binsense.py</div><div class="d">Map class to bin. Sort only at ≥ 70% confidence, once per 3 s</div>
+        <div class="serial"><span style="color:var(--recycle)">'1'</span><span style="color:var(--trash)">'0'</span></div></div>
+      <div class="arrow"></div>
+      <div class="node card"><div class="n">4</div><div class="t">Arduino</div><div class="f">binsense.ino</div>
+        <div class="outs">
+          <div class="out"><i style="background:var(--recycle)"></i>Recycle servo + green LED</div>
+          <div class="out"><i style="background:var(--trash)"></i>Trash servo + red LED</div>
+        </div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -16,4 +16,4 @@ Intellibin tried to sort items three ways, into **trash**, **recycling**, and **
 - **Opening a new serial connection on every detection reset the Arduino.** BinSense opens one connection at startup and keeps it.
 - **There was no debouncing.** One item could trigger several sorts in a row. BinSense adds a confidence threshold and cooldowns on both the Python and Arduino sides.
 
-This script imports from YOLOv5's `models/` and `utils/`. To run it, copy it into the `yolov5/` folder.
+This script imports from YOLOv5's `models/` and `utils/`. To run it, copy it into the `vision/` folder.

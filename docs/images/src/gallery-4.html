@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; width: 100%; }
+  .col { padding: 44px; height: 520px; }
+  .col h2 { font-size: 32px; font-weight: 700; display: flex; align-items: center; gap: 12px; }
+  .col h2 i { width: 16px; height: 16px; border-radius: 50%; }
+  .col .d { font-size: 21px; color: var(--muted); margin-top: 12px; line-height: 1.4; }
+  .tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .tags span { font-size: 22px; padding: 11px 17px; border-radius: 10px; background: var(--bg); }
+  .off .tags span { color: var(--muted); text-decoration: line-through; text-decoration-color: #475569; }
+</style>
+</head>
+<body class="gallery">
+  <header>
+    <div class="eyebrow">Sorting rules</div>
+    <h1>An explicit class-to-bin map, tuned in testing</h1>
+  </header>
+  <div class="stage">
+    <div class="cols">
+      <div class="col card">
+        <h2><i style="background:var(--recycle)"></i>Recycling</h2>
+        <p class="d">Opens the recycle lid</p>
+        <div class="tags"><span>PET bottle</span><span>Plastic bottle</span><span>Glass bottle</span><span>Plastic container</span><span>Egg shell</span><span>Tree leaves</span></div>
+      </div>
+      <div class="col card">
+        <h2><i style="background:var(--trash)"></i>Trash</h2>
+        <p class="d">Opens the trash lid</p>
+        <div class="tags"><span>Face mask</span><span>Food wrapper</span><span>Plastic bag</span><span>Plastic sachet</span><span>Plastic straw</span></div>
+      </div>
+      <div class="col card off">
+        <h2><i style="background:var(--muted)"></i>Turned off</h2>
+        <p class="d">Caused false positives in testing, so their threshold is set above 100%</p>
+        <div class="tags"><span>Paper</span><span>Cardboard</span><span>Aluminum</span><span>UHT carton</span><span>Fruit peels</span><span>Vegetable peels</span><span>Left-over food</span><span>Styrofoam</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
